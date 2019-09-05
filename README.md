@@ -9,7 +9,7 @@ Todos os endpoints, assim que finalizados serão adicionados aqui nesse README.m
   * Configuração do projeto - Sep 4, 2019.
     * Dockerfile - OK
     * Docker-compose
-    * Requirements.txt
+    * Requirements.txt - OK
     * Endpoint de hello world - OK
 
 ## Lista de Endpoints
