@@ -8,7 +8,7 @@ Todos os endpoints, assim que finalizados serão adicionados aqui nesse README.m
 
 * Início do desenvolvimento da autenticação dos usuários:
   * Configuração do projeto - Sep 4, 2019.
-    * Dockerfile
+    * Dockerfile - OK
     * Docker-compose
     * Requirements.txt
-    * Endpoint de hello world
+    * Endpoint de hello world - OK
