@@ -7,9 +7,9 @@ Todos os endpoints, assim que finalizados serão adicionados aqui nesse README.m
 ## Progresso:
 * Início do desenvolvimento da autenticação dos usuários:
   * Configuração do projeto - Sep 4, 2019.
-    * Dockerfile - OK
-    * Docker-compose
-    * Requirements.txt - OK
-    * Endpoint de hello world - OK
+    * **Dockerfile** (Arquivo reponsável pela criação da imagem docker) - OK
+    * **Docker-compose** (Arquivo responsável por gerenciar a criação de containers docker) - OK
+    * **Requirements.txt** (Arquivo responsável por armazenar todas as dependências utilizadas) - OK
+    * **Endpoint de hello world** (Endpoint de teste da API) - OK
 
 ## Lista de Endpoints
