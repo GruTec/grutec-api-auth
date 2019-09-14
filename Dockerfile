@@ -13,4 +13,4 @@ RUN apk add --no-cache --virtual .build-deps gcc musl-dev linux-headers python-d
 RUN pip install --upgrade pip -r requirements.txt --no-cache-dir
 RUN apk --purge del .build-deps
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers=3", "--threads=3", "__init__:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers=3", "--threads=3", "--reload", "__init__:app"]
