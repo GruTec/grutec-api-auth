@@ -13,8 +13,6 @@ services:
     - "5432:5432"
     environment:
       POSTGRES_DB: appdb
-      # POSTGRES_USER: grutec
-      # POSTGRES_PASSWORD: grutecfiap
     image: postgres:11.2-alpine
 
   application:

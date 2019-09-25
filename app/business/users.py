@@ -21,5 +21,4 @@ def post_user():
 
     return json({'message': 'successfully registered', 'data': result}), 201
   except:
-    raise
-    #return json({'message': 'unable to create', 'data': {}}), 500
+    return json({'message': 'unable to create', 'data': {}}), 500
