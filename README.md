@@ -30,7 +30,23 @@ Endpoint responsável por registrar um usuário na plataforma. Objeto base para 
 {
     "username": "joaoanastacio",
 	"password": "grutec",
-	"name": "João Victor Anastácio",
-	"email": "joaoanastacio@gmail.com"
+	"name": "João Victor",
+	"email": "joao@gmail.com"
 }
 ```
+
+### PUT /v1/users/id_do_usuario
+Endpoint responsável por modificar as informações de um usuário na plataforma. Objeto base para modificação de usuário:
+
+Baseado no usuário que foi criado acima:
+
+```json
+{
+    "username": "joaoanastacio1",
+	"password": "grutec1",
+	"name": "João Victor",
+	"email": "joao@gmail.com"
+}
+```
+
+Ao executar, a senha e o username serão alterados.

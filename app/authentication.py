@@ -18,3 +18,7 @@ def hello_world():
 @app.route('/v1/users', methods=['POST'])
 def post_user():
   return users.post_user()
+
+@app.route('/v1/users/<id>', methods=['PUT'])
+def update_user(id):
+  return users.update_user(id)

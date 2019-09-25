@@ -22,3 +22,29 @@ def post_user():
     return json({'message': 'successfully registered', 'data': result}), 201
   except:
     return json({'message': 'unable to create', 'data': {}}), 500
+
+def update_user(id):
+  username = request.json['username']
+  password = request.json['password']
+  name = request.json['name']
+  email = request.json['email']
+
+  user = Users.query.get(id)
+
+  if not user:
+    return json({'message': 'user do not exist', 'data': {}}), 404
+
+  password_hash = generate_password_hash(password)
+
+  try:
+    user.username = username
+    user.password = password_hash
+    user.name = name
+    user.email = email
+
+    db.session.commit()
+    result = user_schema.dump(user)
+
+    return json({'message': 'successfully updated', 'data': result}), 201
+  except:
+    return json({'message': 'unable to updated', 'data': {}}), 500
