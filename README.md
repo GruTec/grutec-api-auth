@@ -13,3 +13,24 @@ Todos os endpoints, assim que finalizados serão adicionados aqui nesse README.m
     * **Endpoint de hello world** (Endpoint de teste da API) - OK
 
 ## Lista de Endpoints
+
+### GET /v1
+Retorna um objeto contendo uma mensagem de hello world. Este é apenas um endpoint de teste da aplicação.
+
+```json
+{
+    "mensagem": "hello world"
+}
+```
+
+### POST /v1/users
+Endpoint responsável por registrar um usuário na plataforma. Objeto base para criação de usuário:
+
+```json
+{
+    "username": "joaoanastacio",
+	"password": "grutec",
+	"name": "João Victor Anastácio",
+	"email": "joaoanastacio@gmail.com"
+}
+```
