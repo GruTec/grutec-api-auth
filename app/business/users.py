@@ -73,6 +73,14 @@ def get_user(id):
   return json({'message': 'user do not exit', 'data': {}}), 500
 
 
+def get_user_by_username(user_username):
+  try:
+    return Users.query.filter(Users.username == user_username).one()
+
+  except:
+    return json({'message': 'not found', 'data': {}}), 404
+
+
 def delete_user(id):
   user = Users.query.get(id)
 

@@ -4,3 +4,4 @@ flask_sqlalchemy
 marshmallow_sqlalchemy
 flask_marshmallow
 psycopg2==2.8
+pyjwt
