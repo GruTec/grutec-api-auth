@@ -55,6 +55,10 @@ Ao executar, a senha e o username serão alterados. Lembrando que o ID do usuár
 
 Endpoint responsável por retornar todos os usuários cadastrados na plataforma.
 
-Neste caso não é necessário passar nenhum objeto como parâmetro na requisição.
+Neste caso não é necessário passar nenhum objeto como parâmetro na requisição. Todas as informações cadastradas para todos os usuários serão retornadas.
 
-Todas as informações cadastradas para todos os usuários serão retornadas.
+### GET /v1/users/id_do_usuario
+
+Endpoint responsável por retornar um usuário da plataforma a partir do ID do mesmo.
+
+Neste caso não é necessário passar nenhum objeto como parâmetro na requisição. Todas as informações cadastradas para aquele usuário serão retornadas.

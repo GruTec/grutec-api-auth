@@ -57,6 +57,17 @@ def get_users():
 
   if users:
     result = users_schema.dump(users)
+    return json({'message': 'successfully fetched', 'data': result}), 201
 
-    return json({'message': 'successfully fetched', 'data': result})
   return json({'message': 'nothing found', 'data': {}})
+
+
+def get_user(id):
+
+  user = Users.query.get(id)
+
+  if user:
+    result = user_schema.dump(user)
+    return json({'message': 'successfully fetched', 'data': result}), 201
+
+  return json({'message': 'user do not exit', 'data': {}}), 500
