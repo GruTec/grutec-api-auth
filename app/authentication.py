@@ -30,3 +30,7 @@ def get_users():
 @app.route('/v1/users/<id>', methods=['GET'])
 def get_user(id):
   return users.get_user(id)
+
+@app.route('/v1/users/<id>', methods=['DELETE'])
+def delete_user(id):
+  return users.delete_user(id)

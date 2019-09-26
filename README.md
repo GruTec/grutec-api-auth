@@ -62,3 +62,9 @@ Neste caso não é necessário passar nenhum objeto como parâmetro na requisiç
 Endpoint responsável por retornar um usuário da plataforma a partir do ID do mesmo.
 
 Neste caso não é necessário passar nenhum objeto como parâmetro na requisição. Todas as informações cadastradas para aquele usuário serão retornadas.
+
+### DELETE /v1/users/id_do_usuario
+
+Endpoint responsável por deletar um usuário da plataforma a partir do seu ID.
+
+Neste caso não é necessário passar nenhum objeto como parâmetro na requisição. Todas as informações cadastradas para aquele usuário serão retornadas para que seja possível apresentar na tela as informações que foram deletadas.

@@ -48,7 +48,7 @@ def update_user(id):
 
     return json({'message': 'successfully updated', 'data': result}), 201
   except:
-    return json({'message': 'unable to updated', 'data': {}}), 500
+    return json({'message': 'unable to update', 'data': {}}), 500
 
 
 def get_users():
@@ -71,3 +71,20 @@ def get_user(id):
     return json({'message': 'successfully fetched', 'data': result}), 201
 
   return json({'message': 'user do not exit', 'data': {}}), 500
+
+
+def delete_user(id):
+  user = Users.query.get(id)
+
+  if not user:
+    return json({'message': 'user do not exist', 'data': {}}), 404
+
+  if user:
+    try:
+      db.session.delete(user)
+      db.session.commit()
+      result = user_schema.dump(user)
+
+      return json({'message': 'successfully deleted', 'data': result}), 201
+    except:
+      return json({'message': 'unable to delete', 'data': {}}), 500
