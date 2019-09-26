@@ -23,6 +23,7 @@ def post_user():
   except:
     return json({'message': 'unable to create', 'data': {}}), 500
 
+
 def update_user(id):
   username = request.json['username']
   password = request.json['password']
@@ -48,3 +49,14 @@ def update_user(id):
     return json({'message': 'successfully updated', 'data': result}), 201
   except:
     return json({'message': 'unable to updated', 'data': {}}), 500
+
+
+def get_users():
+
+  users = Users.query.all()
+
+  if users:
+    result = users_schema.dump(users)
+
+    return json({'message': 'successfully fetched', 'data': result})
+  return json({'message': 'nothing found', 'data': {}})

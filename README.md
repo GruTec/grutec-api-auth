@@ -49,4 +49,12 @@ Baseado no usuário que foi criado acima:
 }
 ```
 
-Ao executar, a senha e o username serão alterados.
+Ao executar, a senha e o username serão alterados. Lembrando que o ID do usuário se mantem o mesmo.
+
+### GET /v1/users
+
+Endpoint responsável por retornar todos os usuários cadastrados na plataforma.
+
+Neste caso não é necessário passar nenhum objeto como parâmetro na requisição.
+
+Todas as informações cadastradas para todos os usuários serão retornadas.
