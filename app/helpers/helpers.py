@@ -22,6 +22,8 @@ def authenticate():
   try:
     if user and check_password_hash(user.password, auth.password):
       jwt_token = jwt.encode({'username': user.username,
+                              'name': user.name,
+                              'email': user.email,
                               'exp': datetime.datetime.now() + datetime.timedelta(hours=12)},
                                app.config['SECRET_KEY'])
 
